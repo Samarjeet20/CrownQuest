@@ -126,17 +126,6 @@ backend setup done, now hit the most favourite command `npm start`
 
 ![online friends list](https://drive.google.com/uc?export=view&id=1-eVsOjwWgfbQiJtAYtFiuJy2--WzPA3d)
 
-## contributors
-
-this is a team project made under the annual event **AVISHKAR** of MNNIT Allahabad.
-
-# TEAM `CODE_PIRATES`
-
-[Ishan gupta](https://github.com/developer-ishan/)
-
-[Mohit pandey](https://github.com/mojoAlpha/)
-
-[Lovedeep singh kamal](https://github.com/dev-lovedeep/)
 
 ## License
 
