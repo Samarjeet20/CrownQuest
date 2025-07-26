@@ -1,8 +1,8 @@
 ![homepage](https://drive.google.com/uc?export=view&id=1VPf18ntL3SL5NUkAfre3Kc1jH8Zf_rSw)
 
-# checkers king
+# Crown Quest
 
-checkers king is an online checkers playing platform where you can play checker game with your friend, random players as well as bot
+CrownQuest is an online checkers playing platform where you can play checker game with your friend, random players as well as bot
 
 ## Installation
 
@@ -12,11 +12,11 @@ the project has two components
 - backend in nodejs
 
 ```bash
-git clone https://github.com/developer-ishan/checkers_king.git
+git clone https://github.com/Samarjeet20/CrownQuest.git
 ```
 
 ```bash
-cd checkers_king
+cd CrownQuest
 ```
 
 ## setting up frontend
