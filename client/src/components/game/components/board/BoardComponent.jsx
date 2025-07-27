@@ -159,7 +159,7 @@ const BoardComponent = ({ board, color, turn, movePiece, lastMove }) => {
   };
 
   //takes coordinate of a box as argument
-  //and return true if they are same as the selected box
+  //and returns true if they are same as the selected box
   //else return false
   const isSelected = (currentI, currentJ) => {
     if (selectedPiece.i === currentI && selectedPiece.j === currentJ)
