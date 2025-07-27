@@ -33,7 +33,7 @@ const Game = () => {
     setMultipleDeviceDetectedModalOpen,
   ] = useState(null);
 
-  const [botLevel, setBotLevel] = useState(-1); //initilay not playing with bot
+  const [botLevel, setBotLevel] = useState(-1); //initilay player not playing with bot
   const [error, setError] = useState(null);
   const [playersInfo, setPlayersInfo] = useState(null);
   const [color, setColor] = useState(null);
@@ -50,6 +50,7 @@ const Game = () => {
     socket.emit("quit-game");
   };
 
+  //socket will help to deliver the message/notification
   useEffect(() => {
     console.log("use-effect called...");
     socket.on("color", (color) => {
