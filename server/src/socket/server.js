@@ -66,3 +66,14 @@ exports.SocketServer = (io) => {
       if (!addedUser.isGuest) await emitMyInfoToFriends(io, socket, addedUser);
     }
     /* ---------------------------------- Check For Multiple Devices ----------------------------------*/
+
+    /* ---------------------------------- Check For Existing Games ----------------------------------*/
+    const existingGameID = await isUserAlreadyInGame(
+      socket.handshake.query.token
+    );
+    if (existingGameID) {
+      const game = getGameWithGameId(existingGameID);
+      console.log("existing game found... sending to user...");
+      socket.emit("ongoing-game", game);
+    }
+    /* ---------------------------------- Check For Existing Games----------------------------------*/
