@@ -65,3 +65,4 @@ exports.SocketServer = (io) => {
     } else {
       if (!addedUser.isGuest) await emitMyInfoToFriends(io, socket, addedUser);
     }
+    /* ---------------------------------- Check For Multiple Devices ----------------------------------*/
