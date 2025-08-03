@@ -10,6 +10,7 @@ exports.deleteUser = async (req, res, next) => {
     req.user.active = false;
     const edited = await req.user.save();
     res.json(edited);
+    next();
   } catch (err) {
     res.status(500).json(err);
   }
@@ -24,6 +25,7 @@ exports.updateUser = async (req, res, next) => {
     req.user.desc = desc;
     const edited = await req.user.save();
     res.json({ ...edited._doc, success: true });
+    next();
   } catch (err) {
     res.status(500).json(err);
   }
@@ -52,8 +54,8 @@ exports.getMySummary = async (req, res, next) => {
 };
 exports.getUserById = async (req, res, next) => {
   try {
-    const userId = req.params.userId;
-    const user = await User.findById(userId);
+    const userid = req.params.userid;
+    const user = await User.findById(userid);
     if (!user || !user.active)
       return res.status(404).json({ msg: "No such user found" });
     user.photo = filterPhoto(user);
@@ -66,9 +68,9 @@ exports.getUserById = async (req, res, next) => {
       photo: user.photo,
       rating: user.rating,
     });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
   }
 };
 exports.uploadProfilePic = (req, res, next) => {

@@ -13,6 +13,7 @@ export const UserProvider = (props) => {
     /**
      * {userId, username, photo}
      * to be reset if user accepts any invite
+     * socketReinitialize is used to reinitialize the socket connection
      */
     socketReinitialize: false,
   });
