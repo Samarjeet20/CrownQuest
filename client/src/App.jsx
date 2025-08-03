@@ -38,10 +38,6 @@ const App = () => {
             <Route exact path="/replay/:matchId">
               <Replay />
             </Route>
-            {/* TODO:for testing remove it later */}
-            <Route exact path="/lobby">
-              <Lobby heading="test" />
-            </Route>
           </Switch>
         </AppWrapper>
       </BrowserRouter>
